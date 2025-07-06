@@ -1,0 +1,187 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.call-to-action {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/img/hotel/showcase-8.webp') center/cover no-repeat;
+    opacity: 0.05;
+    z-index: 1;
+  }
+
+  .cta-banner {
+    background: var(--surface-color);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+    position: relative;
+    z-index: 2;
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+
+    @media (max-width: 768px) {
+      padding: 30px 20px;
+      border-radius: 15px;
+    }
+  }
+
+  .cta-content {
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: var(--heading-color);
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+    }
+
+    .cta-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    .cta-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        gap: 15px;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+          color: var(--accent-color);
+          font-size: 1.2rem;
+        }
+
+        span {
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: var(--default-color);
+        }
+      }
+    }
+  }
+
+  .cta-action {
+    text-align: center;
+
+    @media (max-width: 992px) {
+      margin-top: 40px;
+    }
+
+    .countdown-wrapper {
+      background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), #000 20%) 100%);
+      padding: 25px 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+
+      h4 {
+        color: var(--contrast-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .countdown {
+        gap: 15px;
+
+        div {
+          background: color-mix(in srgb, var(--contrast-color), transparent 10%);
+          padding: 15px 10px;
+          border-radius: 10px;
+          min-width: 60px;
+
+          h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-family: var(--default-font);
+          }
+
+          h4 {
+            color: color-mix(in srgb, var(--accent-color) 90%, black 50%);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      @media (min-width: 576px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: 2px solid;
+
+        &.btn-primary {
+          background: var(--accent-color);
+          color: var(--contrast-color);
+          border-color: var(--accent-color);
+
+          &:hover {
+            background: color-mix(in srgb, var(--accent-color), #000 15%);
+            border-color: color-mix(in srgb, var(--accent-color), #000 15%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 50%);
+          }
+        }
+
+        &.btn-outline {
+          background: transparent;
+          color: var(--accent-color);
+          border-color: var(--accent-color);
+
+          &:hover {
+            background: var(--accent-color);
+            color: var(--contrast-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+          }
+        }
+      }
+    }
+  }
+}
